@@ -1,7 +1,7 @@
 $bg-color: #f4f4f9;
 $sc-color: #1baf76;
 $icon-color: #9294aa;
-$text-color: #1b181d;
+$text-color: #2e2e2e;
 $white: #fff;
 body {
 	background-color: $bg-color;
@@ -19,22 +19,35 @@ section.sidebar {
 		display: flex;
 		flex-direction: column;
 		.logo {
-			height: 48px;
+			text-transform: uppercase;
+			font-size: 2.4rem;
+			font-weight: 900;
+			color: $text-color;
+			span {
+				color: $sc-color;
+				font-weight: 300;
+			}
 		}
 		a.add {
 			font-size: 1.6rem;
 			font-weight: 500;
-			color: $white;
-			background-color: $sc-color;
+			color: $icon-color;
+			//background-color: $sc-color;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 			text-align: center;
 			padding: 1.6rem;
 			border-radius: 1rem;
 			margin: 5rem 0;
+			margin-top: 8rem;
+			transition: all 0.15s ease-in-out;
+
 			i {
 				margin-left: 2rem;
 			}
 			&:hover {
-				filter: brightness(0.9);
+				background-color: $sc-color;
+				color: $white;
 			}
 		}
 		.menu {
@@ -47,8 +60,10 @@ section.sidebar {
 				color: $icon-color;
 				padding: 1.6rem 1.6rem;
 				border-radius: 1rem;
+				transition: all 0.15s ease-in-out;
 				i {
 					margin-right: 3rem;
+					transition: all 0.15s ease-in-out;
 				}
 				&:hover {
 					background-color: $bg-color;
@@ -58,6 +73,9 @@ section.sidebar {
 					}
 				}
 			}
+			.setting {
+				margin-top: 45rem;
+			}
 		}
 	}
 }
@@ -65,14 +83,17 @@ section.nav {
 	width: calc(100% - 300px);
 	position: fixed;
 	background-color: $white;
-	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
 	margin-left: 300px;
+	z-index: 10;
 	.container {
 		z-index: 1;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 2rem 0;
+		position: relative;
 		.search-box {
 			background-color: $bg-color;
 			border-radius: 1px solid #000;
@@ -140,6 +161,30 @@ section.nav {
 				}
 			}
 		}
+		a.logout {
+			display: none;
+			position: absolute;
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: $icon-color;
+			padding: 1rem 1.6rem;
+			border-radius: 0.5rem;
+			right: 2.5%;
+			bottom: -20px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+			background-color: $white;
+			i {
+				margin-right: 1rem;
+			}
+			&:hover {
+				background-color: $bg-color;
+				color: $text-color;
+				i {
+					color: $sc-color;
+				}
+			}
+		}
 	}
 }
 section.main_content {
@@ -148,7 +193,7 @@ section.main_content {
 	margin-left: 300px;
 	padding-top: 15rem;
 	.container {
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 		table {
 			border-collapse: collapse;
@@ -156,7 +201,8 @@ section.main_content {
 			text-align: left;
 			background-color: $white;
 			border-radius: 1rem;
-			box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 			font-size: 1.6rem;
 			color: $sc-color;
 			thead {
@@ -184,6 +230,110 @@ section.main_content {
 				}
 			}
 		}
+		.info_box {
+			z-index: -1;
+			display: flex;
+			justify-content: space-between;
+			gap: 8rem;
+			margin-bottom: 6rem;
+			.info_single {
+				height: 14rem;
+				background-color: $white;
+				width: 20%;
+				border-radius: 1rem;
+				box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px,
+					rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+				.info-icon {
+					background-color: #f6ecff;
+					color: #9c4fdf;
+					font-size: 1.8rem;
+					border-radius: 50%;
+					height: 6rem;
+					aspect-ratio: 1/1;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.info_text {
+					margin-right: 1.5rem;
+					h1 {
+						font-size: 2rem;
+						color: $text-color;
+						opacity: 0.9;
+					}
+
+					p {
+						font-size: 1.4rem;
+						color: $icon-color;
+						font-weight: 500;
+					}
+				}
+			}
+			.info2 {
+				.info-icon {
+					background-color: #ffecec;
+					color: #f14c4c;
+				}
+			}
+			.info3 {
+				.info-icon {
+					background-color: #ecfff7;
+					color: #19ce89;
+				}
+			}
+			.info4 {
+				.info-icon {
+					background-color: #ecfbff;
+					color: #34dbf1;
+				}
+			}
+		}
+		.graphs {
+			display: flex;
+			gap: 8.5rem;
+			.stats {
+				position: relative;
+				width: 50%;
+				background-color: $white;
+				padding: 3rem;
+				border-radius: 1rem;
+				box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+					rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+				h1 {
+					font-size: 1.6rem;
+					color: $text-color;
+					font-weight: 600;
+					opacity: 0.8;
+					margin-bottom: 3rem;
+				}
+				#canvas {
+					height: 100%;
+				}
+			}
+			.stats2 {
+				position: relative;
+				width: 50%;
+				background-color: $white;
+				padding: 3rem;
+				border-radius: 1rem;
+				box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+					rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+				h1 {
+					font-size: 1.6rem;
+					color: $text-color;
+					font-weight: 600;
+					opacity: 0.8;
+					margin-bottom: 3rem;
+				}
+				#canvas {
+					height: 100%;
+				}
+			}
+		}
 	}
 }
 .user_active {
@@ -201,7 +351,7 @@ section.main_content {
 	border-radius: 0.5rem;
 }
 .menu-active {
-	color: $text-color;
+	color: $text-color !important;
 	i {
 		color: $sc-color;
 	}
