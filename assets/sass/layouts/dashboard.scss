@@ -238,6 +238,13 @@ section.main_content {
 			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
 				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 			margin-bottom: 6rem;
+			.form_heading {
+				padding: 0 0 2rem 0;
+				font-size: 2rem;
+				color: $icon-color;
+				font-weight: 500;
+				text-align: center;
+			}
 			.form_section {
 				margin-bottom: 4rem;
 				.form_title {
@@ -283,6 +290,26 @@ section.main_content {
 							}
 						}
 					}
+					.file {
+						position: relative;
+						.input_title {
+							border-bottom: 1px solid $icon-color;
+							position: absolute;
+							padding: 0 10rem 0.5rem 0;
+							bottom: -5px;
+							font-size: 1.4rem;
+							margin-top: 1rem;
+							color: $text-color;
+							opacity: 0.8;
+							i {
+								padding-right: 1rem;
+							}
+						}
+						input {
+							display: none;
+							position: absolute;
+						}
+					}
 					.checkbox {
 						display: flex;
 						justify-content: center;
@@ -320,7 +347,6 @@ section.main_content {
 				}
 			}
 			.submit {
-				margin-top: 2rem;
 				margin-left: 50%;
 				transform: translateX(-50%);
 				padding: 1rem 6rem;

@@ -248,6 +248,13 @@ section.main_content .container form {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin-bottom: 6rem;
 }
+section.main_content .container form .form_heading {
+  padding: 0 0 2rem 0;
+  font-size: 2rem;
+  color: #9294aa;
+  font-weight: 500;
+  text-align: center;
+}
 section.main_content .container form .form_section {
   margin-bottom: 4rem;
 }
@@ -293,6 +300,26 @@ section.main_content .container form .form_section .input_group .input_single .s
 section.main_content .container form .form_section .input_group .input_single .date::-webkit-datetime-edit {
   font-weight: normal;
 }
+section.main_content .container form .form_section .input_group .file {
+  position: relative;
+}
+section.main_content .container form .form_section .input_group .file .input_title {
+  border-bottom: 1px solid #9294aa;
+  position: absolute;
+  padding: 0 10rem 0.5rem 0;
+  bottom: -5px;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #2e2e2e;
+  opacity: 0.8;
+}
+section.main_content .container form .form_section .input_group .file .input_title i {
+  padding-right: 1rem;
+}
+section.main_content .container form .form_section .input_group .file input {
+  display: none;
+  position: absolute;
+}
 section.main_content .container form .form_section .input_group .checkbox {
   display: flex;
   justify-content: center;
@@ -324,7 +351,6 @@ section.main_content .container form .form_section .input_group .small {
   width: 40%;
 }
 section.main_content .container form .submit {
-  margin-top: 2rem;
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 1rem 6rem;
