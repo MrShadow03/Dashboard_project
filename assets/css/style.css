@@ -240,6 +240,100 @@ section.main_content .container table tbody tr td img {
   width: 3.6rem;
   border-radius: 50%;
 }
+section.main_content .container form {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  width: 60%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-bottom: 6rem;
+}
+section.main_content .container form .form_section {
+  margin-bottom: 4rem;
+}
+section.main_content .container form .form_section .form_title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #1baf76;
+  margin-bottom: 2rem;
+}
+section.main_content .container form .form_section .input_group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+section.main_content .container form .form_section .input_group .input_single {
+  width: 100%;
+}
+section.main_content .container form .form_section .input_group .input_single .input_title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #9294aa;
+  margin-bottom: 0.5rem;
+}
+section.main_content .container form .form_section .input_group .input_single .input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #9294aa;
+  font-size: 1.4rem;
+  outline: none;
+  padding: 0 0 0.5rem 0rem;
+  font-weight: 500;
+  color: #363636;
+}
+section.main_content .container form .form_section .input_group .input_single .input::placeholder {
+  font-weight: normal;
+}
+section.main_content .container form .form_section .input_group .input_single .select {
+  font-weight: normal;
+  color: #363636;
+  margin-top: 0.5rem;
+}
+section.main_content .container form .form_section .input_group .input_single .date::-webkit-datetime-edit {
+  font-weight: normal;
+}
+section.main_content .container form .form_section .input_group .checkbox {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+section.main_content .container form .form_section .input_group .checkbox .input {
+  width: auto;
+}
+section.main_content .container form .form_section .input_group .input_radio .input_title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+section.main_content .container form .form_section .input_group .input_radio .dataset {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+section.main_content .container form .form_section .input_group .input_radio .dataset div {
+  margin-bottom: 0.5rem;
+}
+section.main_content .container form .form_section .input_group .input_radio .dataset div label {
+  font-size: 1.4rem;
+  color: #2e2e2e;
+}
+section.main_content .container form .form_section .input_group .small {
+  width: 40%;
+}
+section.main_content .container form .submit {
+  margin-top: 2rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 6rem;
+  border: 1px solid #1baf76;
+  border-radius: 0.5rem;
+  background-color: #1baf76;
+  color: #fff;
+  text-transform: uppercase;
+}
 section.main_content .container .info_box {
   z-index: -1;
   display: flex;
@@ -356,6 +450,10 @@ section.main_content .container .graphs .stats2 #canvas {
 }
 .menu-active i {
   color: #1baf76;
+}
+
+input {
+  accent-color: rgb(62, 160, 91);
 }
 
 /*# sourceMappingURL=style.css.map */

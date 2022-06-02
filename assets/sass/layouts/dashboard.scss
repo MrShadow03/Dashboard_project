@@ -230,6 +230,107 @@ section.main_content {
 				}
 			}
 		}
+		form {
+			background-color: $white;
+			border-radius: 1rem;
+			padding: 3rem;
+			width: 60%;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+			margin-bottom: 6rem;
+			.form_section {
+				margin-bottom: 4rem;
+				.form_title {
+					font-size: 1.6rem;
+					font-weight: 400;
+					color: $sc-color;
+					margin-bottom: 2rem;
+				}
+				.input_group {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					gap: 4rem;
+					.input_single {
+						width: 100%;
+						.input_title {
+							font-size: 1.2rem;
+							font-weight: 400;
+							color: $icon-color;
+							margin-bottom: 0.5rem;
+						}
+						.input {
+							width: 100%;
+							border: none;
+							border-bottom: 1px solid $icon-color;
+							font-size: 1.4rem;
+							outline: none;
+							padding: 0 0 0.5rem 0rem;
+							font-weight: 500;
+							color: #363636;
+							&::placeholder {
+								font-weight: normal;
+							}
+						}
+						.select {
+							font-weight: normal;
+							color: #363636;
+							margin-top: 0.5rem;
+						}
+						.date {
+							&::-webkit-datetime-edit {
+								font-weight: normal;
+							}
+						}
+					}
+					.checkbox {
+						display: flex;
+						justify-content: center;
+						gap: 0.5rem;
+						text-align: left;
+						.input {
+							width: auto;
+						}
+					}
+					.input_radio {
+						.input_title {
+							margin-bottom: 0.5rem;
+							text-align: center;
+						}
+						.dataset {
+							display: flex;
+							gap: 1rem;
+							justify-content: center;
+							align-items: center;
+							margin-top: 1.5rem;
+							div {
+								margin-bottom: 0.5rem;
+
+								label {
+									font-size: 1.4rem;
+									color: $text-color;
+								}
+							}
+						}
+					}
+
+					.small {
+						width: 40%;
+					}
+				}
+			}
+			.submit {
+				margin-top: 2rem;
+				margin-left: 50%;
+				transform: translateX(-50%);
+				padding: 1rem 6rem;
+				border: 1px solid $sc-color;
+				border-radius: 0.5rem;
+				background-color: $sc-color;
+				color: #fff;
+				text-transform: uppercase;
+			}
+		}
 		.info_box {
 			z-index: -1;
 			display: flex;
@@ -355,4 +456,7 @@ section.main_content {
 	i {
 		color: $sc-color;
 	}
+}
+input {
+	accent-color: rgb(62, 160, 91);
 }
